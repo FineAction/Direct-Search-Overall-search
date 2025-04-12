@@ -1,4 +1,4 @@
-﻿class Program
+class Program
 {
 
     public static void Main()
@@ -14,9 +14,9 @@
         Console.WriteLine("Enter Search type // -DRL DIRECT URL //  // -SCH SEARCH //");
 
         string? sType = Console.ReadLine();
-        string? searchParameter = null;
+        string? searchParameter;
         string? searchType = null;
-        
+
 
         if (sType == "-DRL")
         {
@@ -37,13 +37,14 @@
         else
         {
             Console.WriteLine("Command unknown");
-            Main();
+            Console.Clear();
+            ParameterInput();
         }
         return searchType!;
 
     }
     public static void MethodOutputTest(string? searchType)
-    { 
-     Console.WriteLine("Debug: from MethodOutputTest this should be the correct type and parameter. : " + searchType);
+    {
+        Console.WriteLine("Debug: from MethodOutputTest this should be the correct type and parameter. : " + searchType);
     }
 }
